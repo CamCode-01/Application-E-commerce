@@ -106,7 +106,7 @@
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                         <div class="brand_box">
-                            <img src="frontend/images/1.png" alt="img" />
+                            <img class="img-prod"src="frontend/images/1.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
                             <i><img src="frontend/images/star.png"/></i>

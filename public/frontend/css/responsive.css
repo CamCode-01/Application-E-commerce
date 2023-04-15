@@ -1,10 +1,9 @@
 /*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
 
-
 /*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+
     .header-search {
         padding: 15px 0px;
     }
@@ -184,7 +183,7 @@ ul.social_icon {display: none !important;}
 .banner-main .carousel-caption p  {display: none;}
 .banner-main .carousel-caption .buynow {width: 149px; padding: 7px 0;}
 .titlepage h2 {
-font-size: 42px; 
+font-size: 42px;
 }
 .about .about_box_ { margin-bottom: 30px; }
 
@@ -208,7 +207,7 @@ font-size: 42px;
     .location_icon_bottum {display: none;}
     .header {background: inherit; padding-bottom: 0; padding-top: 30px;}
     .last {display: none;}
-    .img-box {display: none;} 
+    .img-box {display: none;}
 
 .logo {float: inherit; padding-bottom: 15px; text-align: center;}
 #myCarousel a.carousel-control-prev {width: 45px; height: 45px;}
@@ -235,7 +234,7 @@ font-size: 16px;
 ul.link li {
 
     padding: 8px 9px;
-    padding-bottom: 0px; 
+    padding-bottom: 0px;
 }
 .copyright {
     margin-top: 60px;

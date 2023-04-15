@@ -18,8 +18,8 @@ class ClientController extends Controller
 
      /* apropos controller */
 
-    public function categorie(){
-        return view('client.categorie');
+    public function boutique(){
+        return view('client.boutique');
     }
 
      /* categorie controller */
@@ -44,10 +44,18 @@ class ClientController extends Controller
   /* login controller */
 
 
-   public function register(){
-    return view('client.register');
+   public function singnup(){
+    return view('client.singnup');
+
+     /* singup controller */
 }
 
-  /* register controller */
+
+   public function paiement(){
+    return view('client.paiement');
+
+      /* singup controller */
+}
+
 
 }

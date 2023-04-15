@@ -18,8 +18,10 @@ Route::get('/', function () {
 });
 Route::get('/home','App\Http\Controllers\ClientController@home');
 Route::get('/apropos','App\Http\Controllers\ClientController@apropos');
-Route::get('/categorie','App\Http\Controllers\ClientController@categorie');
+Route::get('/boutique','App\Http\Controllers\ClientController@boutique');
 Route::get('/contact','App\Http\Controllers\ClientController@contact');
 Route::get('/special','App\Http\Controllers\ClientController@special');
 Route::get('/logi','App\Http\Controllers\ClientController@login');
-Route::get('/register','App\Http\Controllers\ClientController@register');
+Route::get('/singnup','App\Http\Controllers\ClientController@singnup');
+Route::get('/paiement','App\Http\Controllers\ClientController@paiement')
+;
