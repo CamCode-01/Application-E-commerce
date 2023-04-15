@@ -23,5 +23,5 @@ Route::get('/contact','App\Http\Controllers\ClientController@contact');
 Route::get('/special','App\Http\Controllers\ClientController@special');
 Route::get('/logi','App\Http\Controllers\ClientController@login');
 Route::get('/singnup','App\Http\Controllers\ClientController@singnup');
-Route::get('/paiement','App\Http\Controllers\ClientController@paiement')
-;
+Route::get('/paiement','App\Http\Controllers\ClientController@paiement');
+Route::get('/dashboard','App\Http\Controllers\AdminController@dashboard');
