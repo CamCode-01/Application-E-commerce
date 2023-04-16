@@ -53,7 +53,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html"><img src="frontend/images/logo.png" alt="#"></a>
+                                    <a href="{{URL::to('/home')}}"><img src="frontend/images/SkyllTechnologygm.jpg" alt="#"></a>
                                 </div>
                             </div>
                         </div>

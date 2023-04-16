@@ -77,7 +77,7 @@
   <script src="backend/js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="backend/js/dashboard.js"></script>
+  @yield('scripts')
   <!-- End custom js for this page-->
 </body>
 
