@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <!-- basic -->
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Skill Technology</title>
+    <title>Skyll Technology</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,7 +20,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="frontend/css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="frontend/images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="frontend/images/fevicon.png" type="frontend/image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="frontend/css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
@@ -36,7 +36,7 @@
 </head>
 <!-- body -->
 
-<body class="main-layout ">
+<body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
         <div class="loader"><img src="frontend/images/loading.gif" alt="#" /></div>
@@ -53,7 +53,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="{{URL::to('/home')}}"><img src="frontend/images/SkyllTechnologygm.jpg" alt="#"></a>
+                                    <a href="index.html"><img src="frontend/images/skylltechnologygm.jpg" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -64,14 +64,14 @@
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
                                         <li> <a href="{{URL::to('/home')}}">Home</a></li>
-                                        <li> <a href="{{URL::to('/apropos')}}">Apropos</a></li>
-                                        <li> <a href="{{URL::to('/boutique')}}">Boutique </a></li>
-                                        <li> <a href="{{URL::to('/special')}}">Special  </a></li>
+                                        <li> <a href="{{URL::to('/apropos')}}">SkyllTechnology</a></li>
+                                        <li> <a href="{{URL::to('/boutique')}}">Boutique</a></li>
+                                        <li> <a href="{{URL::to('/special')}}">Special</a></li>
                                         <li> <a href="{{URL::to('/contact')}}"> Nous contacter</a></li>
-                                        <li class="last">
+                                        {{-- <li class="last">
                                             <a href="#"><img src="frontend/images/search_icon.png" alt="icon" /></a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </nav>
                             </div>
                         </div>
@@ -79,9 +79,9 @@
                     <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
-                                <li><img src="frontend/icon/call.png" />(+237)657-099-175</li>
+                                <li><img src="frontend/icon/call.png" />(+237)657 099 175</li>
                                 <li><img src="frontend/icon/email.png" />ulrichfedjo@gmail.com</li>
-                                <li><img src="frontend/icon/loc.png" />Localisationn</li>
+                                <li><img src="frontend/icon/loc.png" />position</li>
                             </ul>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
         </div>
         <!-- end header inner -->
     </header>
-          <!-- end header -->
+    <!-- end header -->
 
 
 

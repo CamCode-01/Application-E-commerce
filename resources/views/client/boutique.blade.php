@@ -10,6 +10,24 @@
                     <div class="titlepage">
                         <h2><b><i>Notre Boutique</i></b></h2>
                     </div>
+
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                    <div class="menu-area1">
+                        <div class="limit-box">
+                            <nav class="main-menu">
+                                <ul class="menu-area-main">
+                                    <li class="active"> <a href="index.html">Iphone</a> </li>
+                                    <li> <a href="about.html">Samsung</a> </li>
+                                    <li><a href="brand.html">Google Pixel</a></li>
+                                    <li><a href="special.html">Huawei</a></li>
+                                    <li><a href="contact.html">Autres</a></li>
+                                    <li class="last">
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

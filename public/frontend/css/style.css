@@ -483,7 +483,10 @@ ul.top_icon li a {
 }
 
 .menu-area-main li.active a {
-     color: #fff;
+     color: #ffff;
+}
+.menu-area-main li.active1 a {
+     color: black;
 }
 
 .right_cart_section {
@@ -1912,7 +1915,6 @@ margin-top: 40px
 
 .titlepage {
      padding-bottom: 60px;
-
 }
 
 .titlepage h2 {
@@ -2086,7 +2088,7 @@ ul.location_icon span {
 /*--------------------------------------------------------------------- inner_page css ---------------------------------------------------------------------*/
 
 .brand_color {
-     background-color: black;
+     background-color: #ddd;
 }
 .brand_color .titlepage {
      margin-top: 90px;
