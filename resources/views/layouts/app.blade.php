@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- basic -->
@@ -53,7 +53,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html"><img src="frontend/images/skylltechnologygm.jpg" alt="#"></a>
+                                    <a href="{{URL::to('/home')}}"><img src="frontend/images/skylltechnologygm.jpg" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -64,14 +64,14 @@
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
                                         <li> <a href="{{URL::to('/home')}}">Home</a></li>
-                                        <li> <a href="{{URL::to('/apropos')}}">SkyllTechnology</a></li>
+                                        <li> <a href="{{URL::to('/apropos')}}">Apropos</a></li>
                                         <li> <a href="{{URL::to('/boutique')}}">Boutique</a></li>
                                         <li> <a href="{{URL::to('/special')}}">Special</a></li>
                                         <li> <a href="{{URL::to('/contact')}}"> Nous contacter</a></li>
-                                        {{-- <li class="last">
+                                        <li class="last">
                                             <a href="#"><img src="frontend/images/search_icon.png" alt="icon" /></a>
                                         </li>
-                                    </ul> --}}
+                                    </ul>
                                 </nav>
                             </div>
                         </div>
@@ -124,8 +124,8 @@
                             <div class="menu-bottom">
                                 <ul class="link">
                                     <li> <a href="{{URL::to('/home')}}">Home</a></li>
-                                    <li> <a href="{{URL::to('/apropos')}}">Apropos</a></li>
-                                    <li> <a href="{{URL::to('/categorie')}}">Categorie </a></li>
+                                    <li> <a href="{{URL::to('/apropos')}}">Apropos de nous</a></li>
+                                    <li> <a href="{{URL::to('/boutique')}}">Boutique</a></li>
                                     <li> <a href="{{URL::to('/special')}}">Special  </a></li>
                                     <li> <a href="{{URL::to('/contact')}}"> Nous contacter</a></li>
                                 </ul>

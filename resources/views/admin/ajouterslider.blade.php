@@ -1,9 +1,6 @@
 @extends('layouts.appadmin')
 
 @section('contenu')
-
-<div class="main-panel">
-    <div class="content-wrapper">
         <div class="row grid-margin">
             <div class="col-lg-12">
               <div class="card">
@@ -32,9 +29,6 @@
               </div>
             </div>
           </div>
-    </div>
-</div>
-
 
 @endsection
 

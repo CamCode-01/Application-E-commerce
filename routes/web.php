@@ -30,6 +30,7 @@ Route::get('/paiement','App\Http\Controllers\ClientController@paiement');
 
 /* -----------------------Partie Admin----------------------- */
 Route::get('/dashboard','App\Http\Controllers\AdminController@dashboard');
+Route::get('/commandes','App\Http\Controllers\AdminController@commandes');
 
 
 /* -----------------------Partie Base de donnés----------------------- */
@@ -37,11 +38,14 @@ Route::get('/dashboard','App\Http\Controllers\AdminController@dashboard');
 
 Route::get('/ajoutercategorie','App\Http\Controllers\CategorieController@ajoutercategorie');
 Route::post('/sauvercategorie','App\Http\Controllers\CategorieController@sauvercategorie');
+Route::get('/categories','App\Http\Controllers\CategorieController@categories');
 
 
 Route::get('/ajouterproduit','App\Http\Controllers\ProductController@ajouterproduit');
 Route::post('/sauverproduit','App\Http\Controllers\ProductController@sauverproduit');
+Route::get('/produits','App\Http\Controllers\ProductController@produits');
 
 
 Route::get('/ajouterslider', 'App\Http\Controllers\SliderController@ajouterslider');
 Route::post('/sauverslider','App\Http\Controllers\SliderController@sauverslider');
+Route::get('/sliders','App\Http\Controllers\SliderController@sliders');

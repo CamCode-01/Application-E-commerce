@@ -16,11 +16,11 @@
                         <div class="limit-box">
                             <nav class="main-menu">
                                 <ul class="menu-area-main">
-                                    <li class="active"> <a href="index.html">Iphone</a> </li>
-                                    <li> <a href="about.html">Samsung</a> </li>
-                                    <li><a href="brand.html">Google Pixel</a></li>
-                                    <li><a href="special.html">Huawei</a></li>
-                                    <li><a href="contact.html">Autres</a></li>
+                                    <li class="active1"> <a href="index.html">Iphone</a> </li>
+                                    <li class="active1"> <a href="about.html">Samsung</a> </li>
+                                    <li class="active1"><a href="brand.html">Google Pixel</a></li>
+                                    <li class="active1"><a href="special.html">Huawei</a></li>
+                                    <li class="active1"><a href="contact.html">Autres</a></li>
                                     <li class="last">
                                     </li>
                                 </ul>

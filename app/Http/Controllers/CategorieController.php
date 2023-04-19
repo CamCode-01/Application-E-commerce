@@ -11,6 +11,9 @@ class CategorieController extends Controller
     }
 
     public function sauvercategorie(Request $request){
-        
+
+    }
+    public function categories(){
+        return view('admin.categories');
     }
 }
