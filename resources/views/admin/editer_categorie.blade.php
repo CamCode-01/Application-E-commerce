@@ -5,7 +5,7 @@
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Ajouter Categorie</h4>
+                  <h4 class="card-title">Editer une Categorie</h4>
                   @if (Session::has('statut'))
                         <div class="alert alert-success">
                             {{Session::get('statut')}}
@@ -30,9 +30,9 @@
                     {{ csrf_field() }}
                       <div class="form-group">
                         {{Form::label('', 'Nom de la categorie', ['for' => 'cname'])}}
-                        {{Form::text('nom_categorie', '', ['class' => 'form-control', 'id' => 'cname' ])}}
+                        {{Form::text('nom_categorie',   $categorie->nom_categorie, ['class' => 'form-control', 'id' => 'cname' ])}}
                       </div>
-                        {!!Form::submit('ajouter',['class' => 'btn btn-primary'])!!}
+                        {!!Form::submit('Modifier',['class' => 'btn btn-primary'])!!}
                      {!!Form::close()!!}
 
                 </div>

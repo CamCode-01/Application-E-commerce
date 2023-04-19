@@ -42,8 +42,8 @@
 @section('scripts')
 
   <!-- Custom js for this page-->
-    <script src="backend/js/form-validation.js"></script>
-    <script src="backend/js/bt-maxLength.js"></script>
+    {{-- <script src="backend/js/form-validation.js"></script>
+    <script src="backend/js/bt-maxLength.js"></script> --}}
   <!-- End custom js for this page-->
 
 @endsection
