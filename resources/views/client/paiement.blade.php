@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <title>Skill Technology</title>
     <meta charset="utf-8">
@@ -9,24 +9,24 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="frontend/paiement/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="frontend/paiement/css/animate.css">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/animate.css')}}">
 
-    <link rel="stylesheet" href="frontend/paiement/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="frontend/paiement/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="frontend/paiement/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/magnific-popup.css')}}">
 
-    <link rel="stylesheet" href="frontend/paiement/css/aos.css">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/aos.css')}}">
 
-    <link rel="stylesheet" href="frontend/paiement/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/ionicons.min.css')}}">
 
-    <link rel="stylesheet" href="frontend/paiement/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="frontend/paiement/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/jquery.timepicker.css')}}">
 
 
-    <link rel="stylesheet" href="frontend/paiement/css/flaticon.css">
-    <link rel="stylesheet" href="frontend/paiement/css/icomoon.css">
-    <link rel="stylesheet" href="frontend/paiement/css/style.css">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/paiement/css/style.css')}}">
   </head>
   <body class="goto-here">
 
@@ -181,22 +181,22 @@
     </section> <!-- .section -->
 
 
-  <script src="frontend/paiement/js/jquery.min.js"></script>
-  <script src="frontend/paiement/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="frontend/paiement/js/popper.min.js"></script>
-  <script src="frontend/paiement/js/bootstrap.min.js"></script>
-  <script src="frontend/paiement/js/jquery.easing.1.3.js"></script>
-  <script src="frontend/paiement/js/jquery.waypoints.min.js"></script>
-  <script src="frontend/paiement/js/jquery.stellar.min.js"></script>
-  <script src="frontend/paiement/js/owl.carousel.min.js"></script>
-  <script src="frontend/paiement/js/jquery.magnific-popup.min.js"></script>
-  <script src="frontend/paiement/js/aos.js"></script>
-  <script src="frontend/paiement/js/jquery.animateNumber.min.js"></script>
-  <script src="frontend/paiement/js/bootstrap-datepicker.js"></script>
-  <script src="frontend/paiement/js/scrollax.min.js"></script>
+  <script src="{{asset('frontend/paiement/js/jquery.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/popper.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/jquery.stellar.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/aos.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/jquery.animateNumber.min.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/bootstrap-datepicker.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/scrollax.min.js')}}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="frontend/paiement/js/google-map.js"></script>
-  <script src="frontend/paiement/js/main.js"></script>
+  <script src="{{asset('frontend/paiement/js/google-map.js')}}"></script>
+  <script src="{{asset('frontend/paiement/js/main.js')}}"></script>
 
   <script>
 		$(document).ready(function(){

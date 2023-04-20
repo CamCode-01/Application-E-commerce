@@ -14,21 +14,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
     <!-- style css -->
-    <link rel="stylesheet" href="frontend/css/style.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
     <!-- Responsive-->
-    <link rel="stylesheet" href="frontend/css/responsive.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
     <!-- fevicon -->
-    <link rel="icon" href="frontend/images/fevicon.png" type="frontend/image/gif" />
+    <link rel="icon" href="{{asset('frontend/images/fevicon.png')}}" type="{{asset('frontend/image/gif')}}" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="frontend/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/jquery.mCustomScrollbar.min.css')}}">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <!-- owl stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="frontend/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="frontend/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -39,7 +39,7 @@
 <body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="frontend/images/loading.gif" alt="#" /></div>
+        <div class="loader"><img src="{{asset('frontend/images/loading.gif')}}" alt="#" /></div>
     </div>
     <!-- end loader -->
     <!-- header -->
@@ -53,7 +53,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="{{URL::to('/home')}}"><img src="frontend/images/skylltechnologygm.jpg" alt="#"></a>
+                                    <a href="{{URL::to('/home')}}"><img src="{{asset('frontend/images/skylltechnologygm.jpg')}}" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                                         <li> <a href="{{URL::to('/special')}}">Special</a></li>
                                         <li> <a href="{{URL::to('/contact')}}"> Nous contacter</a></li>
                                         <li class="last">
-                                            <a href="#"><img src="frontend/images/search_icon.png" alt="icon" /></a>
+                                            <a href="#"><img src="{{asset('frontend/images/search_icon.png')}}" alt="icon" /></a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -79,9 +79,9 @@
                     <div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
-                                <li><img src="frontend/icon/call.png" />(+237)657 099 175</li>
-                                <li><img src="frontend/icon/email.png" />ulrichfedjo@gmail.com</li>
-                                <li><img src="frontend/icon/loc.png" />position</li>
+                                <li><img src="{{asset('frontend/icon/call.png')}}" />(+237)657 099 175</li>
+                                <li><img src="{{asset('frontend/icon/email.png')}}" />ulrichfedjo@gmail.com</li>
+                                <li><img src="{{asset('frontend/icon/loc.png')}}" />position</li>
                             </ul>
                         </div>
                     </div>
@@ -143,16 +143,16 @@
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
-    <script src="frontend/js/jquery.min.js"></script>
-    <script src="frontend/js/popper.min.js"></script>
-    <script src="frontend/js/bootstrap.bundle.min.js"></script>
-    <script src="frontend/js/jquery-3.0.0.min.js"></script>
-    <script src="frontend/js/plugin.js"></script>
+    <script src="{{asset('frontend/js/jquery.min.js')}}"></script>
+    <script src="{{asset('frontend/js/popper.min.js')}}"></script>
+    <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery-3.0.0.min.js')}}"></script>
+    <script src="{{asset('frontend/js/plugin.js')}}"></script>
     <!-- sidebar -->
-    <script src="frontend/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="frontend/js/custom.js"></script>
+    <script src="{{asset('frontend/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{asset('frontend/js/custom.js')}}"></script>
     <!-- javascript -->
-    <script src="frontend/js/owl.carousel.js"></script>
+    <script src="{{asset('frontend/js/owl.carousel.js')}}"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <script>
         $(document).ready(function() {
