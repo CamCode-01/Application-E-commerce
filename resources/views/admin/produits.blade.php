@@ -32,7 +32,7 @@
 
 
                         <td>
-                            <button class="btn btn-outline-primary">Editer</button>
+                            <button class="btn btn-outline-primary">Modifier</button>
                             <button class="btn btn-outline-danger">Supprimer</button>
                           </td>
                     </tr>

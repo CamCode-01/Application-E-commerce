@@ -26,9 +26,10 @@
 
                   @endif
 
-                    {!!Form::open(['action' => 'App\Http\Controllers\CategorieController@sauvercategorie', 'method' => 'POST','class' => 'cmxform', 'id' => 'commentForm'])!!}
+                    {!!Form::open(['action' => 'App\Http\Controllers\CategorieController@modifiercategorie', 'method' => 'POST','class' => 'cmxform', 'id' => 'commentForm'])!!}
                     {{ csrf_field() }}
                       <div class="form-group">
+                        {{Form::hidden('id',$categorie->id)}}
                         {{Form::label('', 'Nom de la categorie', ['for' => 'cname'])}}
                         {{Form::text('nom_categorie',   $categorie->nom_categorie, ['class' => 'form-control', 'id' => 'cname' ])}}
                       </div>

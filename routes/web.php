@@ -40,6 +40,9 @@ Route::get('/ajoutercategorie','App\Http\Controllers\CategorieController@ajouter
 Route::post('/sauvercategorie','App\Http\Controllers\CategorieController@sauvercategorie');
 Route::get('/categories','App\Http\Controllers\CategorieController@categories');
 Route::get('editer_categorie/{id}','App\Http\Controllers\CategorieController@editer_categorie');
+Route::post('/modifiercategorie','App\Http\Controllers\CategorieController@modifiercategorie');
+Route::get('/supprimercategorie/{id}', 'App\Http\Controllers\CategorieController@supprimercategorie');
+
 
 
 Route::get('/ajouterproduit','App\Http\Controllers\ProductController@ajouterproduit');

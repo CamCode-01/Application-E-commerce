@@ -1,8 +1,16 @@
 @extends('layouts.appadmin')
+{{Form::hidden('',$increment=1)}}
+
 @section('contenu')
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Catégories</h4>
+   @if (Session::has('statut'))
+          <div class="alert alert-success">
+              {{Session::get('statut')}}
+          </div>
+
+    @endif
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">
@@ -18,7 +26,7 @@
 
                         @foreach ($categories as $categorie)
                         <tr>
-                            <td>1</td>
+                            <td>{{$increment}}</td>
                             <td>{{$categorie->nom_categorie}}</td>
 
 
@@ -28,10 +36,12 @@
 
 
                             <td>
-                              <button class="btn btn-outline-primary" onclick="window.location = '{{url('/editer_categorie/'.$categorie->id)}}'">Editer</button>
-                              <button class="btn btn-outline-danger">Supprimer</button>
+                              <button class="btn btn-outline-primary" onclick="window.location = '{{url('/editer_categorie/'.$categorie->id)}}'">Modifier</button>
+                              <a href="{{url('/supprimercategorie/'.$categorie->id)}}" id="delete" class="btn btn-outline-danger">Supprimer</a>
                             </td>
                         </tr>
+                        {{Form::hidden('',$increment= $increment + 1)}}
+
                         @endforeach
 
                 </table>
