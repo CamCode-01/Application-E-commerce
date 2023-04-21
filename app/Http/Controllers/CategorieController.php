@@ -12,7 +12,7 @@ class CategorieController extends Controller
     }
 
     public function sauvercategorie(Request $request){
-        $this->validate($request, ['nom_categorie' => 'required']);
+        $this->validate($request, ['nom_categorie' => 'required|unique:categories']);
 
         $categorie = new Categorie();
 
@@ -35,7 +35,7 @@ class CategorieController extends Controller
 
     public function modifiercategorie(Request $request){
 
-        $this->validate($request, ['nom_categorie' => 'required']);
+        $this->validate($request, ['nom_categorie' => 'required|unique:categories']);
 
         $categorie = Categorie::find($request->input('id'));
 
