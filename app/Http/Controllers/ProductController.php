@@ -35,11 +35,11 @@ class ProductController extends Controller
                     $fileNameToStore = 'noimage.jpg';
                 }
                 $produit = new Produit();
-                $produit->nom_produit=$request->input('nom_produit');
-                $produit->prix_produit=$request->input('prix_produit');
-                $produit->categorie_produit=$request->input('categorie_produit');
-                $produit->image_produit=$fileNameToStore;
-                $produit->statut=1;
+                $produit->nom_produit = $request->input('nom_produit');
+                $produit->prix_produit = $request->input('prix_produit');
+                $produit->categorie_produit = $request->input('categorie_produit');
+                $produit->image_produit = $fileNameToStore;
+                $produit->statut = 1;
 
                 $produit->save();
 
