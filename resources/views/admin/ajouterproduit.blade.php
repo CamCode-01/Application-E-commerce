@@ -27,7 +27,7 @@
 
             @endif
 
-                    {!!Form::open(['action' => 'App\Http\Controllers\ProductController@sauverproduit', 'method' => 'POST','class' => 'cmxform', 'id' => 'commentForm'])!!}
+                    {!!Form::open(['action' => 'App\Http\Controllers\ProductController@sauverproduit', 'method' => 'POST','class' => 'cmxform', 'id' => 'commentForm','enctype'=>'multipart/form-data'])!!}
                     {{ csrf_field() }}
                       <div class="form-group">
                         {{Form::label('', 'Nom du produit', ['for' => 'cname'])}}
@@ -46,7 +46,7 @@
 
                       <div class="form-group">
                         {{Form::label('', 'image', ['for' => 'cname'])}}
-                        {{Form::file('prix_image', ['class' => 'form-control', 'id' => 'cname' ])}}
+                        {{Form::file('image_produit', ['class' => 'form-control', 'id' => 'cname' ])}}
                       </div>
                       {!!Form::submit('ajouter',['class' => 'btn btn-primary'])!!}
                      {!!Form::close()!!}
