@@ -29,7 +29,7 @@ class ProductController extends Controller
 
                     $fileNameToStore = $fileName.'_'.time().'.'.$extension;
 
-                    $path = $request->file('image_produit')->storeAs('public/image_produit',$fileNameToStore);
+                    $path = $request->file('image_produit')->storeAs('public/images_produit',$fileNameToStore);
                 }
                 else{
                     $fileNameToStore = 'noimage.jpg';
@@ -51,5 +51,14 @@ class ProductController extends Controller
     public function produits(){
         $produits = Produit::get();
         return view('admin.produits')->with('produits',$produits);
+    }
+    public function editerproduit($id){
+        $produit = Produit::find($id);
+
+        $categories = Categorie::All()->pluck('nom_categorie','nom_categorie');
+
+        
+
+        return view('admin.editerproduit')->with('produit',$produit)->with('categories',$categories);
     }
 }

@@ -25,7 +25,7 @@
                     @foreach ($produits as $produit)
                     <tr>
                         <td>{{$increment}}</td>
-                        <td>{{$produit->image_produit}}</td>
+                        <td><img src="/storage/images_produit/{{ $produit->image_produit }}"></td>
                         <td>{{$produit->nom_produit}}</td>
                         <td>{{$produit->categorie_produit}}</td>
                         <td>{{$produit->prix_produit}}</td>
@@ -39,7 +39,7 @@
 
                         </td>
                         <td>
-                            <button class="btn btn-outline-primary">Modifier</button>
+                            <button class="btn btn-outline-primary" onclick="window.location = '{{url('/editer_produit/'.$produit->id)}}'">Modifier</button>
                             <button class="btn btn-outline-danger">Supprimer</button>
                           </td>
                     </tr>

@@ -15,6 +15,7 @@
             @endif
 
             @if (count($errors)> 0)
+            
                   <div class="alert alert-danger">
                       <ul>
                           @foreach ($errors->all() as $error)
@@ -31,17 +32,17 @@
                     {{ csrf_field() }}
                       <div class="form-group">
                         {{Form::label('', 'Nom du produit', ['for' => 'cname'])}}
-                        {{Form::text('nom_produit', '', ['class' => 'form-control', 'id' => 'cname' ])}}
+                        {{Form::text('nom_produit', $produit->nom_produit, ['class' => 'form-control', 'id' => 'cname' ])}}
                       </div>
 
                       <div class="form-group">
                         {{Form::label('', 'Prix du produit', ['for' => 'cname'])}}
-                        {{Form::number('prix_produit', '', ['class' => 'form-control', 'id' => 'cname' ])}}
+                        {{Form::number('prix_produit', $produit->prix_produit, ['class' => 'form-control', 'id' => 'cname' ])}}
                       </div>
 
                       <div class="form-group">
                             {{Form::label('', 'Catégorie du produit')}}
-                            {{Form::select('categorie_produit', $categories, null, ['placeholder' => 'sélectionner la catégorie','class'=>'form-control'])}}
+                            {{Form::select('categorie_produit', $categories,  $produit->categorie_produit,['class'=>'form-control'])}}
                      </div>
 
                       <div class="form-group">
