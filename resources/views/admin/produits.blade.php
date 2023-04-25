@@ -40,8 +40,16 @@
                         </td>
                         <td>
                             <button class="btn btn-outline-primary" onclick="window.location = '{{url('/editer_produit/'.$produit->id)}}'">Modifier</button>
-                            <button class="btn btn-outline-danger">Supprimer</button>
-                          </td>
+                            <a href="{{url('/supprimerproduit/'.$produit->id)}}" id="delete" class="btn btn-outline-danger">Supprimer</a>
+
+                        @if ($produit->statut==1)
+                             <button class="btn btn-outline-warning" onclick="window.location = '{{url('/desactiver_produit/'.$produit->id)}}'">Desactiver</button>
+
+                            @else
+                            <button class="btn btn-outline-success" onclick="window.location = '{{url('/activer_produit/'.$produit->id)}}'">Activer</button>
+
+                        @endif
+                        </td>
                     </tr>
                     {{Form::hidden('',$increment= $increment + 1)}}
 

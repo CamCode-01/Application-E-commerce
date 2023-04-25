@@ -44,11 +44,16 @@ Route::post('/modifiercategorie','App\Http\Controllers\CategorieController@modif
 Route::get('/supprimercategorie/{id}', 'App\Http\Controllers\CategorieController@supprimercategorie');
 
 
-
 Route::get('/ajouterproduit','App\Http\Controllers\ProductController@ajouterproduit');
 Route::post('/sauverproduit','App\Http\Controllers\ProductController@sauverproduit');
 Route::get('/produits','App\Http\Controllers\ProductController@produits');
 Route::get('/editer_produit/{id}','App\Http\Controllers\ProductController@editerproduit');
+Route::post('/modifierproduit','App\Http\Controllers\ProductController@modifierproduit');
+Route::get('/supprimerproduit/{id}','App\Http\Controllers\ProductController@supprimerproduit');
+Route::get('/activer_produit/{id}','App\Http\Controllers\ProductController@activerproduit');
+Route::get('/desactiver_produit/{id}','App\Http\Controllers\ProductController@desactiverproduit');
+
+
 
 
 Route::get('/ajouterslider', 'App\Http\Controllers\SliderController@ajouterslider');
