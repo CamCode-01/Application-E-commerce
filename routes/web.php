@@ -48,6 +48,7 @@ Route::get('/supprimercategorie/{id}', 'App\Http\Controllers\CategorieController
 Route::get('/ajouterproduit','App\Http\Controllers\ProductController@ajouterproduit');
 Route::post('/sauverproduit','App\Http\Controllers\ProductController@sauverproduit');
 Route::get('/produits','App\Http\Controllers\ProductController@produits');
+Route::get('/editer_produit/{id}','App\Http\Controllers\ProductController@editerproduit');
 
 
 Route::get('/ajouterslider', 'App\Http\Controllers\SliderController@ajouterslider');

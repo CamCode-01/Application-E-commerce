@@ -39,7 +39,7 @@
 
                         </td>
                         <td>
-                            <button class="btn btn-outline-primary">Modifier</button>
+                            <button class="btn btn-outline-primary" onclick="window.location = '{{url('/editer_produit/'.$produit->id)}}'">Modifier</button>
                             <button class="btn btn-outline-danger">Supprimer</button>
                           </td>
                     </tr>

@@ -52,4 +52,11 @@ class ProductController extends Controller
         $produits = Produit::get();
         return view('admin.produits')->with('produits',$produits);
     }
+    public function editerproduit($id){
+
+        $produit = Produit::find($id);
+        $categories = Categorie::all()->pluck('nom_categorie','nom_categorie');
+
+        return view('admin.editerproduit')->with('produit',$produit)->with('categories',$categories);
+    }
 }
