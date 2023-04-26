@@ -30,7 +30,7 @@
                     {!!Form::open(['action' => ['App\Http\Controllers\ProductController@modifierproduit'], 'method' => 'POST','class' => 'cmxform', 'id' => 'commentForm','enctype'=>'multipart/form-data'])!!}
                     {{ csrf_field() }}
                       <div class="form-group">
-                        {{Form::hidden('id')}}
+                        {{Form::hidden('id',$produit->id)}}
                         {{Form::label('', 'Nom du produit', ['for' => 'cname'])}}
                         {{Form::text('nom_produit',  $produit->nom_produit, ['class' => 'form-control', 'id' => 'cname' ])}}
                       </div>
