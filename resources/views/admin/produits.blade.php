@@ -33,7 +33,7 @@
                     @foreach ($produits as $produit)
                     <tr>
                         <td>{{$increment}}</td>
-                        <td><img src="/storage/images_produit/{{ $produit->image_produit }}" alt=""></td>
+                        <td><img src="storage/images_produit/{{ $produit->image_produit }}" alt=""></td>
                         <td>{{$produit->nom_produit}}</td>
                         <td>{{$produit->categorie_produit}}</td>
                         <td>{{$produit->prix_produit}}</td>

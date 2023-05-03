@@ -34,7 +34,7 @@
 
                         <tr>
                             <td>{{$increment}}</td>
-                            <td><img src="/storage/slider_images/{{$slider->slider_image}}" alt=""></td>
+                            <td><img src="storage/slider_images/{{$slider->slider_image}}" alt=""></td>
                             <td>{{$slider->description1}}</td>
                             <td>{{$slider->description2}}</td>
 
