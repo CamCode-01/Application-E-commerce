@@ -30,7 +30,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach (   $sliders as $slider)
+                    @foreach ($sliders as $slider)
 
                         <tr>
                             <td>{{$increment}}</td>

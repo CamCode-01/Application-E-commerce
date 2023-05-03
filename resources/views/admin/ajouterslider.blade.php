@@ -31,12 +31,12 @@
                     {!!Form::open(['action' => 'App\Http\Controllers\SliderController@sauverslider', 'method' => 'POST','class' => 'cmxform', 'id' => 'commentForm','enctype'=>'multipart/form-data'])!!}
                     {{ csrf_field() }}
                       <div class="form-group">
-                        {{Form::label('', 'Description  one', ['for' => 'cname'])}}
+                        {{Form::label('', 'description1', ['for' => 'cname'])}}
                         {{Form::text('description1', '', ['class' => 'form-control', 'id' => 'cname' ])}}
                       </div>
 
                       <div class="form-group">
-                        {{Form::label('', 'Description two', ['for' => 'cname'])}}
+                        {{Form::label('', 'Description2', ['for' => 'cname'])}}
                         {{Form::text('description2', '', ['class' => 'form-control', 'id' => 'cname' ])}}
                       </div>
 

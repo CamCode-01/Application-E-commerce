@@ -20,7 +20,7 @@ class ProductController extends Controller
                                 'prix_produit'=>'required',
                                 'image_produit'=>'image|nullable|max:1999']);
 
-                if ($request->hasfile('image_produit')) {
+                if ($request->hasFile('image_produit')) {
                     $fileNameWithExt = $request->file('image_produit')->getClientOriginalName();
 
                     $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
@@ -29,7 +29,7 @@ class ProductController extends Controller
 
                     $fileNameToStore = $fileName.'_'.time().'.'.$extension;
 
-                    $path = $request->file('image_produit')->storeAs('public/image_produit',$fileNameToStore);
+                    $path = $request->file('image_produit')->storeAs('public/images_produit',$fileNameToStore);
                 }
                 else{
                     $fileNameToStore = 'noimage.jpg';
