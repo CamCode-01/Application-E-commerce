@@ -8,7 +8,10 @@
         <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="first-slide" src="{{asset('frontend/images/banner.jpg')}}" alt="First slide">
+
+                    @foreach($sliders as $slider)
+
+                    <img class="first-slide" src="storage/slider_images/{{$slider->slider_image}}" alt="First Slide">
                     <div class="container">
                         <div class="carousel-caption relative">
                             <span>Nouveaux</span>
@@ -22,8 +25,11 @@
                             </ul>
                         </div>
                     </div>
+
+                    @endforeach
+
                 </div>
-                <div class="carousel-item">
+                {{-- <div class="carousel-item">
                     <img class="second-slide" src="{{asset('frontend/images/banner.jpg')}}" alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption relative">
@@ -39,8 +45,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
+                </div> --}}
+                {{-- <div class="carousel-item">
                     <img class="third-slide" src="{{asset('frontend/images/banner.jpg')}}" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption relative">
@@ -56,7 +62,9 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+
+
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <i class='fa fa-angle-left'></i>

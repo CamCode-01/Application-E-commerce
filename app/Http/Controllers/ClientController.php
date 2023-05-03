@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Slider;
+
 class ClientController extends Controller
 {
     public function home(){
-        return view('client.home');
+        $sliders = Slider::where('statut',1)->get();
+        return view('client.home')->with('sliders',$sliders);
     }
 
     /* home controller */
