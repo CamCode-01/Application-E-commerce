@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Models\Slider;
 
+use App\Models\Produit;
+
 class ClientController extends Controller
 {
     public function home(){
         $sliders = Slider::where('statut',1)->get();
-        return view('client.home')->with('sliders',$sliders);
+        $produits = Produit::where('statut',1)->get();
+        return view('client.home')->with('sliders',$sliders)->with('produits',$produits);
     }
 
     /* home controller */

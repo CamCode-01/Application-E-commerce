@@ -105,71 +105,18 @@
                 </div>
             </div>
         </div>
+
+
         <div class="brand-bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img class="img-prod"src="{{asset('frontend/images/1.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/2.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/3.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
+                    @foreach ($produits as $produit)
 
-
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
                         <div class="brand_box">
-                            <img src="{{asset('frontend/images/4.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/5.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/6.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
+                            <img class="img-prod"src="storage/images_produit/{{$produit->image_produit}}" alt="" />
+                            <h3><strong class="red">{{$produit->prix_produit}}</strong>fcfa</h3>
+                            <span>{{$produit->nom_produit}}</span>
                             <i><img src="{{asset('frontend/images/star.png')}}"/></i>
                             <i><img src="{{asset('frontend/images/star.png')}}"/></i>
                             <i><img src="{{asset('frontend/images/star.png')}}"/></i>
@@ -179,10 +126,14 @@
                     <div class="col-md-12">
                         <a class="read-more">See More</a>
                     </div>
+
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <!-- end brand -->
     <!-- clients -->
@@ -269,38 +220,6 @@
         </div>
     </div>
     <!-- end clients -->
-    <!-- contact -->
-    <div class="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Contact us</h2>
-                    </div>
-                    <form class="main_form">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                <input class="form-control" placeholder="Your name" type="text" name="Your Name">
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                <input class="form-control" placeholder="Email" type="e-mail" name="Email">
-                            </div>
-                            <div class=" col-md-12">
-                                <input class="form-control" placeholder="Phone" type="number" name="Phone">
-                            </div>
-                            <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Message"></textarea>
-                            </div>
-                            <div class=" col-md-12">
-                                <button class="send">Send</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end contact -->
 
 
     @endsection
