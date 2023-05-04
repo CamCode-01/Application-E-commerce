@@ -7,16 +7,14 @@
     <section class="slider_section">
         <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
             <div class="carousel-inner">
+
+                @foreach ($sliders as $slider)
                 <div class="carousel-item active">
-
-                    @foreach($sliders as $slider)
-
                     <img class="first-slide" src="storage/slider_images/{{$slider->slider_image}}" alt="First Slide">
                     <div class="container">
                         <div class="carousel-caption relative">
-                            <span>Nouveaux</span>
-                            <h1>Reduction de 25%</h1>
-                            <p>Bienvenu sur notre site </p>
+                            <span>{{$slider->description1}}</span>
+                            <h1>{{$slider->description2}} </h1>
                             <a class="buynow" href="#">Acheter</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -25,10 +23,8 @@
                             </ul>
                         </div>
                     </div>
-
-                    @endforeach
-
                 </div>
+                @endforeach
                 {{-- <div class="carousel-item">
                     <img class="second-slide" src="{{asset('frontend/images/banner.jpg')}}" alt="Second slide">
                     <div class="container">
