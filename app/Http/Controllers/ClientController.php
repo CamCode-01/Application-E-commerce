@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Slider;
 
+use App\Models\Categorie;
+
 use App\Models\Produit;
 
 class ClientController extends Controller
@@ -25,10 +27,17 @@ class ClientController extends Controller
      /* apropos controller */
 
     public function boutique(){
-        return view('client.boutique');
+        $categories = Categorie::get();
+        $produits = Produit::where('statut',1)->get();
+        return view('client.boutique')->with('categories',$categories)->with('produits',$produits);
     }
 
      /* categorie controller */
+     public function select_par_cat($name){
+        $categories = Categorie::get();
+        $produits = Produit::where('categorie_produit',$name)->where('statut',1)->get();
+        return view ('client.boutique')->with('produits',$produits)->with('categories',$categories);
+     }
 
     public function contact(){
         return view('client.contact');

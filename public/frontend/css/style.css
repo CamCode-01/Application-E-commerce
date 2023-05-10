@@ -485,8 +485,14 @@ ul.top_icon li a {
 .menu-area-main li.active a {
      color: #ffff;
 }
-.menu-area-main li.active1 a {
+.menu-area-main1 li.active1 a{
      color: black;
+}
+.menu-area-main1 li.actu a {
+    color: red;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 35px;
 }
 
 .right_cart_section {

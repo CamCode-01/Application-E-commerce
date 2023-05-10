@@ -26,6 +26,7 @@ Route::get('/special','App\Http\Controllers\ClientController@special');
 Route::get('/logi','App\Http\Controllers\ClientController@login');
 Route::get('/singnup','App\Http\Controllers\ClientController@singnup');
 Route::get('/paiement','App\Http\Controllers\ClientController@paiement');
+Route::get('/select_par_cat/{name}','App\Http\Controllers\ClientController@select_par_cat');
 
 
 /* -----------------------Partie Admin----------------------- */

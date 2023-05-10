@@ -15,12 +15,12 @@
                     <div class="menu-area1">
                         <div class="limit-box">
                             <nav class="main-menu">
-                                <ul class="menu-area-main">
-                                    <li class="active1"> <a href="index.html">Iphone</a> </li>
-                                    <li class="active1"> <a href="about.html">Samsung</a> </li>
-                                    <li class="active1"><a href="brand.html">Google Pixel</a></li>
-                                    <li class="active1"><a href="special.html">Huawei</a></li>
-                                    <li class="active1"><a href="contact.html">Autres</a></li>
+                                <ul class="menu-area-main1">
+                                    <li class="active1 {{(request()->is('boutique') ? 'actu' : '')}}"> <a href="{{URL::to('/boutique')}}">Voir tout</a></li>
+                                    @foreach ($categories as $categorie)
+                                        <li class="active1 {{(request()->is('select_par_cat/'.$categorie->nom_categorie) ? 'actu' : '')}}"> <a href="select_par_cat/{{$categorie->nom_categorie}}">{{$categorie->nom_categorie}}</a></li>
+                                    @endforeach
+
                                     <li class="last">
                                     </li>
                                 </ul>
@@ -41,75 +41,21 @@
         <div class="brand-bg">
             <div class="container">
                 <div class="row">
+                    @foreach ($produits as $produit)
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
+
                         <div class="brand_box">
-                            <img src="{{asset('frontend/images/1.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
+                            <img src="storage/images_produit/{{$produit->image_produit}}" alt="img" />
+                            <h3><strong class="red">{{$produit->prix_produit}}</strong>fcfa</h3>
+                            <span>{{$produit->nom_produit}}</span>
                             <i><img src="{{asset('frontend/images/star.png')}}"/></i>
                             <i><img src="{{asset('frontend/images/star.png')}}"/></i>
                             <i><img src="{{asset('frontend/images/star.png')}}"/></i>
                             <i><img src="{{asset('frontend/images/star.png')}}"/></i>
                         </div>
+
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/2.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/3.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/4.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/5.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
-                        <div class="brand_box">
-                            <img src="{{asset('frontend/images/6.png')}}" alt="img" />
-                            <h3>$<strong class="red">100</strong></h3>
-                            <span>Mobile Phone</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <a class="read-more">See More</a>
-                    </div>
+                     @endforeach
                 </div>
             </div>
         </div>

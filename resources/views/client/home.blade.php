@@ -11,6 +11,7 @@
                 @foreach ($sliders as $slider)
                 <div class="carousel-item active">
                     <img class="first-slide" src="storage/slider_images/{{$slider->slider_image}}" alt="First Slide">
+                    @endforeach
                     <div class="container">
                         <div class="carousel-caption relative">
                             <span>{{$slider->description1}}</span>
@@ -24,7 +25,7 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+
                 {{-- <div class="carousel-item">
                     <img class="second-slide" src="{{asset('frontend/images/banner.jpg')}}" alt="Second slide">
                     <div class="container">
@@ -123,11 +124,12 @@
                             <i><img src="{{asset('frontend/images/star.png')}}"/></i>
                         </div>
                     </div>
+                    @endforeach
                     <div class="col-md-12">
                         <a class="read-more">See More</a>
                     </div>
 
-                    @endforeach
+
                 </div>
             </div>
         </div>
