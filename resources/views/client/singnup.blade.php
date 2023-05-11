@@ -4,14 +4,35 @@
 
 @section('authentification')
 
+            @if (Session::has('statut'))
+            <div class="alert alert-success">
+                {{Session::get('statut')}}
+            </div>
+
+            @endif
+
+            @if (count($errors)> 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>
+                        {{$error}}
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+
+            @endif
 
 
-				<form class="login100-form validate-form" action="">
+
+				<form class="login100-form validate-form" action="{{url('/creer_compte')}}" method="POST">
+                    {{ csrf_field() }}
 					<span class="login100-form-title">
 						Creer un Compte
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid name is required">
+					<div class="wrap-input100 validate-input" data-validate = "entre votre nom">
 						<input class="input100" type="text" name="nom" placeholder="Votre Nom">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -27,15 +48,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="mot de pass">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-
-                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="confpass" placeholder="Confirmer">
+						<input class="input100" type="password" name="password" placeholder="mot de pass">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>

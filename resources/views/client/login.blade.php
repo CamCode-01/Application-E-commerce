@@ -4,9 +4,30 @@
 
 @section('authentification')
 
+@if (Session::has('statut'))
+            <div class="alert alert-success">
+                {{Session::get('statut')}}
+            </div>
+
+            @endif
+
+            @if (count($errors)> 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>
+                        {{$error}}
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+
+            @endif
 
 
-				<form class="login100-form validate-form">
+
+				<form class="login100-form validate-form" action="{{url('/creer_compte')}}" method="POST">
+                    {{ csrf_field() }}
 					<span class="login100-form-title">
 						se connecter
 					</span>

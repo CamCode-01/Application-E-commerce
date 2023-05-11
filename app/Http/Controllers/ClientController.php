@@ -10,6 +10,8 @@ use App\Models\Categorie;
 
 use App\Models\Produit;
 
+use App\Models\Client;
+
 class ClientController extends Controller
 {
     public function home(){
@@ -50,6 +52,17 @@ class ClientController extends Controller
     }
 
  /* special controller */
+
+public function creer_compte(Request $request){
+    $this->validate($request,['email'=>'email|required|unique:clients','password'=>'required|min:4']);
+    $client = new Client();
+    // $client->nom = $request->input('nom');
+    $client->email = $request->input('email');
+    $client->password = bcrypt($request->input('password'));
+
+    $client->save();
+    return back()->with('statut','votre compte a été creer avec succes');
+}
 
 
  public function login(){
