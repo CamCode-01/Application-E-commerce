@@ -5,7 +5,7 @@
 @section('authentification')
 
 @if (Session::has('statut'))
-            <div class="alert alert-success">
+            <div class="alert alert-danger">
                 {{Session::get('statut')}}
             </div>
 
@@ -26,7 +26,7 @@
 
 
 
-				<form class="login100-form validate-form" action="{{url('/creer_compte')}}" method="POST">
+				<form class="login100-form validate-form" action="{{url('/acceder_compte')}}" method="POST">
                     {{ csrf_field() }}
 					<span class="login100-form-title">
 						se connecter
@@ -41,7 +41,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="mot de pass">
+						<input class="input100" type="password" name="password" placeholder="mot de pass">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>

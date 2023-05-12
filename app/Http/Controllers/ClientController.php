@@ -1,8 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Hash;
 
 use App\Models\Slider;
 
@@ -56,12 +57,30 @@ class ClientController extends Controller
 public function creer_compte(Request $request){
     $this->validate($request,['email'=>'email|required|unique:clients','password'=>'required|min:4']);
     $client = new Client();
-    // $client->nom = $request->input('nom');
     $client->email = $request->input('email');
     $client->password = bcrypt($request->input('password'));
 
     $client->save();
     return back()->with('statut','votre compte a été creer avec succes');
+}
+public function acceder_compte(Request $request)
+{
+    $this->validate($request,['email'=>'email|required','password'=>'required']);
+    $client = Client::where('email',$request->input('email'))->first();
+    if ($client) {
+        if (Hash::check($request->input('password'),$client->password)) {
+            Session::put('client',$client);
+            return redirect('/boutique');
+        }
+        else{
+            return back()->with('statut','mot de pass ou email incorrect');
+
+        }
+    }
+    else{
+        return back()->with('statut','vous n'."'".'avez pas de compte');
+    }
+
 }
 
 
