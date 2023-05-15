@@ -23,6 +23,9 @@
     <link rel="icon" href="{{asset('frontend/images/fevicon.png')}}" type="{{asset('frontend/image/gif')}}" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="{{asset('frontend/css/jquery.mCustomScrollbar.min.css')}}">
+        <!-- font awseome -->
+        <link rel="stylesheet" href="fontawesome-free-6.4.0-web/fontawesome.min.css">
+
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <!-- owl stylesheets -->
@@ -33,6 +36,8 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <link rel="shortcut icon" href="{{asset('backend/images/skylltechnologygm.jpg')}}" />
+
 </head>
 <!-- body -->
 
@@ -66,11 +71,23 @@
                                         <li> <a href="{{URL::to('/home')}}">Home</a></li>
                                         <li> <a href="{{URL::to('/apropos')}}">Apropos</a></li>
                                         <li> <a href="{{URL::to('/boutique')}}">Boutique</a></li>
-                                        <li> <a href="{{URL::to('/special')}}">Special</a></li>
                                         <li> <a href="{{URL::to('/contact')}}"> Nous contacter</a></li>
                                         <li class="last">
                                             <a href="#"><img src="{{asset('frontend/images/search_icon.png')}}" alt="icon" /></a>
                                         </li>
+                                        @if (Session::has('client'))
+
+                                        <li class="last1">
+                                            <a href="{{URL::to('/logout')}}"><i class="fa fa-light fa-user" style="color: white;"></i>Se déconnecter</a>
+                                        </li>
+
+                                        @else
+
+                                        <li class="last1">
+                                            <a href="{{URL::to('/logi')}}"><i class="fa fa-light fa-user" style="color: white;">Se connecté(é)</i></a>
+                                        </li>
+
+                                        @endif
                                     </ul>
                                 </nav>
                             </div>
@@ -148,7 +165,12 @@
     <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-3.0.0.min.js')}}"></script>
     <script src="{{asset('frontend/js/plugin.js')}}"></script>
-    <!-- sidebar -->
+
+            <!-- font awseome -->
+
+   <script src="https://kit.fontawesome.com/fc084be29a.js" crossorigin="anonymous"></script>
+
+            <!-- sidebar -->
     <script src="{{asset('frontend/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
     <script src="{{asset('frontend/js/custom.js')}}"></script>
     <!-- javascript -->

@@ -29,6 +29,7 @@ Route::get('/paiement','App\Http\Controllers\ClientController@paiement');
 Route::get('/select_par_cat/{name}','App\Http\Controllers\ClientController@select_par_cat');
 Route::post('/creer_compte','App\Http\Controllers\ClientController@creer_compte');
 Route::post('/acceder_compte','App\Http\Controllers\ClientController@acceder_compte');
+Route::get('/logout','App\Http\Controllers\ClientController@logout');
 
 /* -----------------------Partie Admin----------------------- */
 Route::get('/dashboard','App\Http\Controllers\AdminController@dashboard');

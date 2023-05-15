@@ -13,6 +13,8 @@ use App\Models\Produit;
 
 use App\Models\Client;
 
+use Illuminate\Support\Facades\Session;
+
 class ClientController extends Controller
 {
     public function home(){
@@ -81,6 +83,10 @@ public function acceder_compte(Request $request)
         return back()->with('statut','vous n'."'".'avez pas de compte');
     }
 
+}
+public function logout(){
+    Session::forget('client');
+    return back();
 }
 
 

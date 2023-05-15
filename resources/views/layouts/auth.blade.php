@@ -18,6 +18,8 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('login/css/util.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('login/css/main.css')}}">
 <!--===============================================================================================-->
+<link rel="shortcut icon" href="{{asset('backend/images/skylltechnologygm.jpg')}}" />
+
 </head>
 <body>
 

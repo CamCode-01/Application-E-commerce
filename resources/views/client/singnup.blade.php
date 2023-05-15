@@ -4,25 +4,7 @@
 
 @section('authentification')
 
-            @if (Session::has('statut'))
-            <div class="alert alert-success">
-                {{Session::get('statut')}}
-            </div>
 
-            @endif
-
-            @if (count($errors)> 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>
-                        {{$error}}
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
-
-            @endif
 
 
 
@@ -31,6 +13,26 @@
 					<span class="login100-form-title">
 						Creer un Compte
 					</span>
+                    
+                    @if (Session::has('statut'))
+                    <div class="alert alert-success">
+                        {{Session::get('statut')}}
+                    </div>
+
+                    @endif
+
+                    @if (count($errors)> 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>
+                                {{$error}}
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+
+                    @endif
 
 					<div class="wrap-input100 validate-input" data-validate = "entre votre nom">
 						<input class="input100" type="text" name="name" placeholder="Votre Nom">

@@ -452,7 +452,7 @@ background-position: center center;
 
 nav.main-menu {
      float: right;
-     margin-left: 0;
+     margin-left: -20px;
 }
 
 ul.top_icon {
@@ -494,6 +494,11 @@ ul.top_icon li a {
     padding: 10px;
     border-radius: 35px;
 }
+ .last1 *{
+    padding: 3px;
+margin-right: 3px;
+ }
+
 
 .right_cart_section {
      float: right;
@@ -1079,7 +1084,6 @@ ul.top_icon li a {
 }
 
 
-}
 .main-menu ul li:last-child a {
      padding-right: 0;
 }
@@ -1095,11 +1099,9 @@ ul.top_icon li a {
      position: relative;
      border-bottom: solid #eee 1px;
 }
-.main-menu ul>li .sub-down li a::before {}
 .main-menu ul>li .sub-down li a:hover {
      color: #111111;
 }
-.main-menu ul>li .sub-down li a:hover::before {}
 .main-menu ul li:first-child {
      margin-left: 0;
 }

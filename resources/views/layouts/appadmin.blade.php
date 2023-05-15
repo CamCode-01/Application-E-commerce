@@ -16,12 +16,11 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{{asset('backend/css/style.css')}}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('backend/images/logo_2H_tech.png')}}" />
+  <link rel="shortcut icon" href="{{asset('backend/images/skylltechnologygm.jpg')}}" />
 </head>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
-
 
 
             {{--Start navbar 1--}}

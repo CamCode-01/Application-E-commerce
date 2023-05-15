@@ -4,7 +4,13 @@
 
 @section('authentification')
 
-@if (Session::has('statut'))
+
+				<form class="login100-form validate-form" action="{{url('/acceder_compte')}}" method="POST">
+                    {{ csrf_field() }}
+					<span class="login100-form-title">
+						se connecter
+					</span>
+                    @if (Session::has('statut'))
             <div class="alert alert-danger">
                 {{Session::get('statut')}}
             </div>
@@ -22,15 +28,7 @@
                 </ul>
             </div>
 
-            @endif
-
-
-
-				<form class="login100-form validate-form" action="{{url('/acceder_compte')}}" method="POST">
-                    {{ csrf_field() }}
-					<span class="login100-form-title">
-						se connecter
-					</span>
+@endif
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input100" type="text" name="email" placeholder="Email">
