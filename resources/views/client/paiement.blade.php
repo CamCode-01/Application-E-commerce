@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="{{asset('frontend/paiement/css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/paiement/css/style.css')}}">
   </head>
-  <body class="goto-here">
 
     <section class="ftco-section">
       <div class="container">

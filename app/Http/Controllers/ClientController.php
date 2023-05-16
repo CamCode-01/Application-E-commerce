@@ -59,17 +59,11 @@ class ClientController extends Controller
         return redirect('/boutique');
      }
 
-    public function contact(){
-        return view('client.contact');
-    }
+     public function cart(){
+        return view('client.cart');
+     }
 
-    /* contact controller */
 
-    public function special(){
-        return view('client.special');
-    }
-
- /* special controller */
 
 public function creer_compte(Request $request){
     $this->validate($request,['email'=>'email|required|unique:clients','password'=>'required|min:4']);
