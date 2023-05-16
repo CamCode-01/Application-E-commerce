@@ -69,12 +69,12 @@
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
                                         <li> <a href="{{URL::to('/home')}}">Home</a></li>
-                                        <li> <a href="{{URL::to('/apropos')}}">Apropos</a></li>
                                         <li> <a href="{{URL::to('/boutique')}}">Boutique</a></li>
-                                        <li> <a href="{{URL::to('/contact')}}"> Nous contacter</a></li>
                                         <li class="last">
                                             <a href="#"><img src="{{asset('frontend/images/search_icon.png')}}" alt="icon" /></a>
                                         </li>
+                                        <li> <a href="{{URL::to('/apropos')}}">pannier</a></li>
+
                                         @if (Session::has('client'))
 
                                         <li class="last1">

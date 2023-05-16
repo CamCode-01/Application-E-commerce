@@ -15,6 +15,9 @@ use App\Models\Client;
 
 use Illuminate\Support\Facades\Session;
 
+use App\Cart;
+
+
 class ClientController extends Controller
 {
     public function home(){
@@ -42,6 +45,18 @@ class ClientController extends Controller
         $categories = Categorie::get();
         $produits = Produit::where('categorie_produit',$name)->where('statut',1)->get();
         return view ('client.boutique')->with('produits',$produits)->with('categories',$categories);
+     }
+
+     public function ajouter_au_panier($id){
+        $produit = Produit::find($id);
+
+        $oldCart = Session::has('cart')? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->add($produit, $id);
+        Session::put('cart', $cart);
+
+        //dd(Session::get('cart'));
+        return redirect('/boutique');
      }
 
     public function contact(){

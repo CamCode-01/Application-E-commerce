@@ -18,7 +18,7 @@
                                 <ul class="menu-area-main1">
                                     <li class="active1 {{(request()->is('boutique') ? 'actu' : '')}}"> <a href="{{URL::to('/boutique')}}">Voir tout</a></li>
                                     @foreach ($categories as $categorie)
-                                        <li class="active1 {{(request()->is('select_par_cat/'.$categorie->nom_categorie) ? 'actu' : '')}}"> <a href="select_par_cat/{{$categorie->nom_categorie}}">{{$categorie->nom_categorie}}</a></li>
+                                        <li class="active1 {{(request()->is('/select_par_cat/'.$categorie->nom_categorie) ? 'actu' : '')}}"> <a href="select_par_cat/{{$categorie->nom_categorie}}">{{$categorie->nom_categorie}}</a></li>
                                     @endforeach
 
                                     <li class="last">
@@ -48,10 +48,15 @@
                             <img src="storage/images_produit/{{$produit->image_produit}}" alt="img" />
                             <h3><strong class="red">{{$produit->prix_produit}}</strong>fcfa</h3>
                             <span>{{$produit->nom_produit}}</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
+                            <a href="">
+                                <i><img src="{{asset('frontend/images/star.png')}}"/></i>
+                            </a>
+                            <a href="">
+                                <i><img src="{{asset('frontend/images/star.png')}}"/></i>
+                            </a>
+                            <a href="ajouter_au_panier/{{$produit->id}}">
+                                <i><img src="{{asset('frontend/images/star.png')}}"/></i>
+                            </a>
                         </div>
 
                     </div>
