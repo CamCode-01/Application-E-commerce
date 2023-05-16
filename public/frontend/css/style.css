@@ -494,9 +494,8 @@ ul.top_icon li a {
     padding: 10px;
     border-radius: 35px;
 }
- .last1 *{
-    padding: 3px;
-margin-right: 3px;
+ .last1{
+    margin-right: 4px;
  }
 
 

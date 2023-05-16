@@ -48,15 +48,9 @@
                             <img src="storage/images_produit/{{$produit->image_produit}}" alt="img" />
                             <h3><strong class="red">{{$produit->prix_produit}}</strong>fcfa</h3>
                             <span>{{$produit->nom_produit}}</span>
-                            <a href="">
-                                <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            </a>
-                            <a href="">
-                                <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            </a>
-                            <a href="ajouter_au_panier/{{$produit->id}}">
-                                <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            </a>
+                            <a href="#"><i class="fa fa-light fa-star"></i></a>
+                            <a href="#"><i class="fa fa-solid fa-heart"></i></a>
+                            <a href="#"><i class="fa fa-duotone fa-cart-plus"></i></a>
                         </div>
 
                     </div>

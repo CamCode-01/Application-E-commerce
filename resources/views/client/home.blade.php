@@ -17,9 +17,9 @@
                             <h1>{{$slider->description2}} </h1>
                             <a class="buynow" href="#">Acheter</a>
                             <ul class="social_icon">
-                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-brands fa-facebook"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-brands fa-twitter"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-brands fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -118,10 +118,9 @@
                             <img class="img-prod"src="storage/images_produit/{{$produit->image_produit}}" alt="" />
                             <h3><strong class="red">{{$produit->prix_produit}}</strong>fcfa</h3>
                             <span>{{$produit->nom_produit}}</span>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
-                            <i><img src="{{asset('frontend/images/star.png')}}"/></i>
+                            <a href="#"><i class="fa fa-light fa-star"></i></a>
+                            <a href="#"><i class="fa fa-solid fa-heart"></i></a>
+                            <a href="#"><i class="fa fa-duotone fa-cart-plus"></i></a>
                         </div>
                     </div>
                     @endforeach

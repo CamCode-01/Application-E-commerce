@@ -24,7 +24,7 @@
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="{{asset('frontend/css/jquery.mCustomScrollbar.min.css')}}">
         <!-- font awseome -->
-        <link rel="stylesheet" href="fontawesome-free-6.4.0-web/fontawesome.min.css">
+        <link rel="stylesheet" href="{{asset('fonts/css/all.css')}}">
 
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -73,18 +73,18 @@
                                         <li class="last">
                                             <a href="#"><img src="{{asset('frontend/images/search_icon.png')}}" alt="icon" /></a>
                                         </li>
-                                        <li> <a href="{{URL::to('/cart')}}">pannier</a></li>
+                                        <li> <a href="{{URL::to('/cart')}}"><i class="fa fa-duotone fa-cart-plus"></i> [0]</a></li>
 
                                         @if (Session::has('client'))
 
-                                        <li class="last1">
-                                            <a href="{{URL::to('/logout')}}"><i class="fa fa-light fa-user" style="color: white;"></i>Se déconnecter</a>
+                                        <li >
+                                            <a href="{{URL::to('/logout')}}"><span class="last1"></span><i class="fa fa-light fa-circle-user"></i></a>
                                         </li>
 
                                         @else
 
-                                        <li class="last1">
-                                            <a href="{{URL::to('/logi')}}"><i class="fa fa-light fa-user" style="color: white;">Se connecté(é)</i></a>
+                                        <li>
+                                            <a href="{{URL::to('/logi')}}"><span class="last1">Se connecter</span><i class="fa fa-thin fa-right-to-bracket"></i></a>
                                         </li>
 
                                         @endif
@@ -98,7 +98,7 @@
                             <ul>
                                 <li><img src="{{asset('frontend/icon/call.png')}}" />(+237)657 099 175</li>
                                 <li><img src="{{asset('frontend/icon/email.png')}}" />ulrichfedjo@gmail.com</li>
-                                <li><img src="{{asset('frontend/icon/loc.png')}}" />position</li>
+                                <li><img src="{{asset('frontend/icon/loc.png')}}" />Position</li>
                             </ul>
                         </div>
                     </div>
@@ -133,9 +133,9 @@
                                     <br>ulrichfedjo@gmail.com</p>
                             </div>
                             <ul class="location_icon">
-                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-brands fa-facebook"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-brands fa-twitter"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-brands fa-instagram"></i></a></li>
 
                             </ul>
                             <div class="menu-bottom">

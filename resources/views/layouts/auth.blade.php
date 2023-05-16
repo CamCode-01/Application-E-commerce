@@ -19,6 +19,9 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('login/css/main.css')}}">
 <!--===============================================================================================-->
 <link rel="shortcut icon" href="{{asset('backend/images/skylltechnologygm.jpg')}}" />
+        <!-- font awseome -->
+        <link rel="stylesheet" href="{{asset('fonts/css/all.css')}}">
+
 
 </head>
 <body>

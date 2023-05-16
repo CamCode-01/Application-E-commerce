@@ -13,7 +13,7 @@
 					<span class="login100-form-title">
 						Creer un Compte
 					</span>
-                    
+
                     @if (Session::has('statut'))
                     <div class="alert alert-success">
                         {{Session::get('statut')}}
@@ -38,7 +38,7 @@
 						<input class="input100" type="text" name="name" placeholder="Votre Nom">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fa fa-light fa-circle-user" aria-hidden="true"></i>
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
