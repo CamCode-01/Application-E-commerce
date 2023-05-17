@@ -50,7 +50,7 @@
                             <span>{{$produit->nom_produit}}</span>
                             <a href="#"><i class="fa fa-light fa-star"></i></a>
                             <a href="#"><i class="fa fa-solid fa-heart"></i></a>
-                            <a href="#"><i class="fa fa-duotone fa-cart-plus"></i></a>
+                            <a href="ajouter_au_panier/{{$produit->id}}"><i class="fa fa-duotone fa-cart-plus"></i></a>
                         </div>
 
                     </div>

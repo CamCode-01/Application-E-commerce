@@ -60,7 +60,15 @@ class ClientController extends Controller
      }
 
      public function cart(){
-        return view('client.cart');
+        if(!Session::has('cart')){
+            return view('client.cart');
+        }
+
+        $oldCart = Session::has('cart')? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        
+        return view('client.cart', ['produits' => $cart->items]);
+
      }
 
 

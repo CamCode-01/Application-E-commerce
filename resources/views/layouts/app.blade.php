@@ -73,7 +73,7 @@
                                         <li class="last">
                                             <a href="#"><img src="{{asset('frontend/images/search_icon.png')}}" alt="icon" /></a>
                                         </li>
-                                        <li> <a href="{{URL::to('/cart')}}"><i class="fa fa-duotone fa-cart-plus"></i> [0]</a></li>
+                                        <li> <a href="{{URL::to('/cart')}}"><i class="fa fa-duotone fa-cart-plus"></i> [{{Session::has('cart')?Session::get('cart')->totalQty:0}}]</a></li>
 
                                         @if (Session::has('client'))
 
