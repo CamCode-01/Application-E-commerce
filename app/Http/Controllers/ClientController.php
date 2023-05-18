@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Session;
 
 use App\Cart;
 
+use Illuminate\Support\Facades\Redirect;
+
 
 class ClientController extends Controller
 {
@@ -66,8 +68,35 @@ class ClientController extends Controller
 
         $oldCart = Session::has('cart')? Session::get('cart'):null;
         $cart = new Cart($oldCart);
-        
+
         return view('client.cart', ['produits' => $cart->items]);
+
+     }
+
+     public function modifier_panier(Request $request, $id){
+        $oldCart = Session::has('cart')? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->updateQty($request->id, $request->quantity);
+        Session::put('cart', $cart);
+
+        //dd(Session::get('cart'));
+        return redirect::to('/cart');
+     }
+
+     public function retirer_produit($id){
+        $oldCart = Session::has('cart')? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->removeItem($id);
+
+        if(count($cart->items) > 0){
+            Session::put('cart', $cart);
+        }
+        else{
+            Session::forget('cart');
+        }
+
+        //dd(Session::get('cart'));
+        return redirect::to('/cart');
 
      }
 

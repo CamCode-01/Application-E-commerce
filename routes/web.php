@@ -27,6 +27,8 @@ Route::get('/paiement','App\Http\Controllers\ClientController@paiement');
 Route::get('/select_par_cat/{name}','App\Http\Controllers\ClientController@select_par_cat');
 Route::get('ajouter_au_panier/{id}','App\Http\Controllers\ClientController@ajouter_au_panier');
 Route::get('/cart',[App\Http\Controllers\ClientController::class,'cart']);
+Route::POST('/modifier_qty/{id}',[App\Http\Controllers\ClientController::class,'modifier_panier']);
+Route::get('/retirer_produit/{id}',[App\Http\Controllers\ClientController::class,'retirer_produit']);
 
 Route::get('/logi','App\Http\Controllers\ClientController@login');
 Route::get('/singnup','App\Http\Controllers\ClientController@singnup');

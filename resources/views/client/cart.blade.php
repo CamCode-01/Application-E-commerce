@@ -36,17 +36,18 @@
                           <tr class="text-center">
                             <th>&nbsp;</th>
                             <th>&nbsp;</th>
-                            <th>Product name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
+                            <th>Nom Produit</th>
+                            <th>Prix</th>
+                            <th>Quantité</th>
                             <th>Total</th>
                           </tr>
                         </thead>
+                        @if (Session::has('cart'))
                         <tbody>
                             @foreach ($produits as $produit)
 
                                 <tr class="text-center">
-                                    <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+                                    <td class="product-remove"><a href="retirer_produit/{{$produit['id_produit']}}"><span class="ion-ios-close"></span></a></td>
 
                                     <td class="image-prod"><div class="img" style="background-image:url(storage/images_produit/{{$produit['image_produit']}});"></div></td>
 
@@ -56,11 +57,14 @@
                                     </td>
 
                                     <td class="price">{{$produit['prix_produit']}}</td>
-                                    <form action="">
+
+                                    <form action="{{url('/modifier_qty/'.$produit['id_produit'])}}" method="POST">
+                                        {{ csrf_field() }}
                                         <td class="quantity">
                                             <div class="input-group mb-3">
                                             <input type="number" name="quantity" class="quantity form-control input-number" value="{{$produit['qty']}}" min="1">
                                         </div>
+                                        <input type="submit" value="Modifier" class="btn btn-success">
                                         </td>
                                     </form>
 
@@ -73,6 +77,8 @@
 
                           </tr><!-- END TR-->
                         </tbody>
+
+                        @endif
                       </table>
                   </div>
             </div>
@@ -117,23 +123,23 @@
                     <h3>Cart Totals</h3>
                     <p class="d-flex">
                         <span>Subtotal</span>
-                        <span>$20.60</span>
+                        <span>0.00fcfa</span>
                     </p>
                     <p class="d-flex">
                         <span>Delivery</span>
-                        <span>$0.00</span>
+                        <span>0.00fcfa</span>
                     </p>
                     <p class="d-flex">
                         <span>Discount</span>
-                        <span>$3.00</span>
+                        <span>0.00fcfa</span>
                     </p>
                     <hr>
                     <p class="d-flex total-price">
                         <span>Total</span>
-                        <span>$17.60</span>
+                        <span>0.00fcfa</span>
                     </p>
                 </div>
-                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceder au paiement</a></p>
             </div>
         </div>
         </div>
