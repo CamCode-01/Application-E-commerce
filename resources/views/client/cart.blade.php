@@ -136,10 +136,12 @@
                     <hr>
                     <p class="d-flex total-price">
                         <span>Total</span>
-                        <span>0.00fcfa</span>
+                        @if(Session::has('cart') && isset(Session::get('cart')->totalPrice))
+                        <span>{{Session::get('cart')->totalPrice}}fcfa</span>
+                        @endif
                     </p>
                 </div>
-                <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceder au paiement</a></p>
+                <p><a href="{{URL::to('/paiement')}}" class="btn btn-primary py-3 px-4">Proceder au paiement</a></p>
             </div>
         </div>
         </div>

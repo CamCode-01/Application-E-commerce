@@ -101,6 +101,16 @@ class ClientController extends Controller
      }
 
 
+     public function paiement(){
+        if(!Session::has('cart')){
+            return view('client.cart');
+        }
+        return view('client.paiement');
+
+          /* singup controller */
+    }
+
+
 
 public function creer_compte(Request $request){
     $this->validate($request,['email'=>'email|required|unique:clients','password'=>'required|min:4']);
@@ -150,11 +160,7 @@ public function logout(){
 }
 
 
-   public function paiement(){
-    return view('client.paiement');
 
-      /* singup controller */
-}
 
 
 }
