@@ -19,6 +19,10 @@ use App\Cart;
 
 use Illuminate\Support\Facades\Redirect;
 
+use Stripe\Charge;
+
+use Stripe\Stripe;
+
 
 class ClientController extends Controller
 {
@@ -108,6 +112,35 @@ class ClientController extends Controller
         return view('client.paiement');
 
           /* singup controller */
+    }
+    public function payer(Request $request){
+        if(!Session::has('cart')){
+            return view('client.cart');
+        }
+        $oldCart = Session::has('cart')? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        Stripe::setApiKey('sk_test_51N9HIxGlubtAU4vNq61jMIJAMNFZsEVGoF3jC4t3kDsd6h3MavdB2fzIz85ffkI22NVmdfJESzg8IA9gpq3qHl1O00lCzQtix8');
+
+        try{
+
+            $charge = Charge::create(array(
+                "amount" => $cart->totalPrice * 100,
+                "currency" => "fcfa",
+                "source" => $request->input('stripeToken'), // obtainded with Stripe.js
+                "description" => "Test Charge"
+            ));
+
+
+
+        } catch(\Exception $e){
+            Session::put('error', $e->getMessage());
+            return redirect('/paiement');
+        }
+
+        Session::forget('cart');
+        // Session::put('success', 'Purchase accomplished successfully !');
+        return redirect('/cart')->with('status','Achat validé avec succès');
+
     }
 
 

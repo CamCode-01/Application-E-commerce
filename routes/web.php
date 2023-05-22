@@ -29,6 +29,7 @@ Route::get('ajouter_au_panier/{id}','App\Http\Controllers\ClientController@ajout
 Route::get('/cart',[App\Http\Controllers\ClientController::class,'cart']);
 Route::POST('/modifier_qty/{id}',[App\Http\Controllers\ClientController::class,'modifier_panier']);
 Route::get('/retirer_produit/{id}',[App\Http\Controllers\ClientController::class,'retirer_produit']);
+Route::post('/payer',[App\Http\Controllers\ClientController::class,'payer']);
 
 Route::get('/logi','App\Http\Controllers\ClientController@login');
 Route::get('/singnup','App\Http\Controllers\ClientController@singnup');

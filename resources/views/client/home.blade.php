@@ -1,30 +1,27 @@
-
 @extends('layouts.app')
 
 @section('contenu')
-
-
     <section class="slider_section">
 
         <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
             @foreach ($sliders as $slider)
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="first-slide" src="storage/slider_images/{{$slider->slider_image}}" alt="First Slide">
-                    <div class="container">
-                        <div class="carousel-caption relative">
-                            <span>{{$slider->description1}}</span>
-                            <h1>{{$slider->description2}} </h1>
-                            <a class="buynow" href="#">Acheter</a>
-                            <ul class="social_icon">
-                                <li> <a href="#"><i class="fa fa-brands fa-facebook"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-brands fa-twitter"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-brands fa-instagram"></i></a></li>
-                            </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="first-slide" src="storage/slider_images/{{ $slider->slider_image }}" alt="First Slide">
+                        <div class="container">
+                            <div class="carousel-caption relative">
+                                <span>{{ $slider->description1 }}</span>
+                                <h1>{{ $slider->description2 }} </h1>
+                                <a class="buynow" href="#">Acheter</a>
+                                <ul class="social_icon">
+                                    <li> <a href="#"><i class="fa fa-brands fa-facebook"></i></a></li>
+                                    <li> <a href="#"><i class="fa fa-brands fa-twitter"></i></a></li>
+                                    <li> <a href="#"><i class="fa fa-brands fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-               {{-- <div class="carousel-item">
+                    {{-- <div class="carousel-item">
                     <img class="second-slide" src="{{asset('frontend/images/banner.jpg')}}" alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption relative">
@@ -41,7 +38,7 @@
                         </div>
                     </div>
                 </div> --}}
-                {{-- <div class="carousel-item">
+                    {{-- <div class="carousel-item">
                     <img class="third-slide" src="{{asset('frontend/images/banner.jpg')}}" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption relative">
@@ -59,7 +56,7 @@
                     </div>
                 </div> --}}
 
-            </div>
+                </div>
             @endforeach
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <i class='fa fa-angle-left'></i>
@@ -78,20 +75,23 @@
             <div class="row">
                 <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
                     <div class="about_img">
-                        <figure><img src="{{asset('frontend/images/about.png')}}" alt="img" /></figure>
+                        <figure><img src="{{ asset('frontend/images/about.png') }}" alt="img" /></figure>
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
                     <div class="about_box">
                         <h3>Apropos de nous</h3>
                         <span>Our Mobile Shop</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of It is a long established fact that a reader will be distracted by the </p>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                            when looking at its layout. The point of It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout. The point of It is a
+                            long established fact that a reader will be distracted by the </p>
 
                     </div>
 
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- end about -->
 
@@ -112,17 +112,17 @@
             <div class="container">
                 <div class="row">
                     @foreach ($produits as $produit)
-
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
-                        <div class="brand_box">
-                            <img class="img-prod"src="storage/images_produit/{{$produit->image_produit}}" alt="" />
-                            <h3><strong class="red">{{$produit->prix_produit}}</strong>fcfa</h3>
-                            <span>{{$produit->nom_produit}}</span>
-                            <a href="#"><i class="fa fa-light fa-star"></i></a>
-                            <a href="#"><i class="fa fa-solid fa-heart"></i></a>
-                            <a href="#"><i class="fa fa-duotone fa-cart-plus"></i></a>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
+                            <div class="brand_box">
+                                <img class="img-prod"src="storage/images_produit/{{ $produit->image_produit }}"
+                                    alt="" />
+                                <h3><strong class="red">{{ $produit->prix_produit }}</strong>fcfa</h3>
+                                <span>{{ $produit->nom_produit }}</span>
+                                <a href="#"><i class="fa fa-light fa-star"></i></a>
+                                <a href="#"><i class="fa fa-solid fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-duotone fa-cart-plus"></i></a>
+                            </div>
                         </div>
-                    </div>
                     @endforeach
                     <div class="col-md-12">
                         <a class="read-more">See More</a>
@@ -167,10 +167,13 @@
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                        irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
-                                        <img src="{{asset('frontend/icon/testimonial_qoute.png')}}">
+                                        <img src="{{ asset('frontend/icon/testimonial_qoute.png') }}">
                                     </div>
                                 </div>
                             </div>
@@ -185,10 +188,13 @@
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                        irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
-                                        <img src="{{asset('frontend/icon/testimonial_qoute.png')}}">
+                                        <img src="{{ asset('frontend/icon/testimonial_qoute.png') }}">
                                     </div>
                                 </div>
                             </div>
@@ -204,10 +210,13 @@
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                        irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
-                                        <img src="{{asset('frontend/icon/testimonial_qoute.png')}}">
+                                        <img src="{{ asset('frontend/icon/testimonial_qoute.png') }}">
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +230,4 @@
         </div>
     </div>
     <!-- end clients -->
-
-
-    @endsection
-
+@endsection
