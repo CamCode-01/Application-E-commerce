@@ -78,7 +78,14 @@
                           </tr><!-- END TR-->
                         </tbody>
 
-                        @endif
+
+                        @else
+                            @if(Session::has('status'))
+                            <div class="alert alert-success">
+                                {{Session::get('status')}}
+                            </div>
+                            @endif
+                            @endif
                       </table>
                   </div>
             </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Commande;
+
 class AdminController extends Controller
 {
               /* singup controller */
@@ -14,7 +16,8 @@ class AdminController extends Controller
     }
 
     public function commandes(){
-        return view('admin.commandes');
+        $commandes = Commande::get();
+        return view('admin.commandes')->with('commandes',$commandes);
 
     }
 }

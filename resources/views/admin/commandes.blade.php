@@ -1,4 +1,5 @@
 @extends('layouts.appadmin')
+{{Form::hidden('',$increment=1)}}
 @section('contenu')
 
       <div class="card">
@@ -19,16 +20,21 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach ($commandes as $commande)
                     <tr>
-                        <td>1</td>
-                        <td>2012/08/03</td>
-                        <td>2012/08/03</td>
-                        <td>2012/08/03</td>
-                        <td>2012/08/03</td>
+                        <td>{{$increment}}</td>
+                        <td>{{$commande->nom}}</td>
+                        <td>{{$commande->Adresse}}</td>
+                        <td>{{$commande->panier}}</td>
+                        <td>{{$commande->payment_id}}</td>
                         <td>
                             <button class="btn btn-outline-primary">Editer</button>
                           </td>
                     </tr>
+                    {{Form::hidden('',$increment=$increment+1)}}
+
+                    @endforeach
+
                 </table>
               </div>
             </div>

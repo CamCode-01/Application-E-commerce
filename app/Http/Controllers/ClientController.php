@@ -23,6 +23,8 @@ use Stripe\Charge;
 
 use Stripe\Stripe;
 
+use App\Models\Commande;
+
 
 class ClientController extends Controller
 {
@@ -130,6 +132,13 @@ class ClientController extends Controller
                 "description" => "Test Charge"
             ));
 
+            $commandes = new Commande;
+            $commandes->nom = $request->input('name');
+            $commandes->adresse =$request->input('address');
+            $commandes->panier = serialize($cart);
+            $commandes->payment_id = $charge->id;
+
+            $commandes->save();
 
 
         } catch(\Exception $e){

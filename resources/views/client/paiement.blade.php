@@ -34,6 +34,14 @@
                     <form action="{{ url('/payer') }}" class="billing-form" method="POST" id="checkout-form">
                         {{ csrf_field() }}
                         <h3 class="mb-4 billing-heading text-center">Billing Details</h3>
+                        @if (Session::has('error'))
+
+                        <div class="alert alert-danger">
+                            {{Session::get('error')}}
+                            {{Session::put('error',null)}}
+                        </div>
+
+                  @endif
                         <div class="row align-items-end">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -121,25 +129,9 @@
 
 
     <script src="https://js.stripe.com/v2/"></script>
-    <script src="src/js/paiement.js"></script>
+    <script src="src/js/checkout.js"></script>
 
 
-    <script src="{{ asset('frontend/paiement/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/jquery-migrate-3.0.1.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/popper.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/jquery.easing.1.3.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/jquery.stellar.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/aos.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/jquery.animateNumber.min.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/bootstrap-datepicker.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/scrollax.min.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="{{ asset('frontend/paiement/js/google-map.js') }}"></script>
-    <script src="{{ asset('frontend/paiement/js/main.js') }}"></script>
 
     <script>
         $(document).ready(function() {
@@ -177,4 +169,25 @@
 
         });
     </script>
+
+
+
+    <script src="{{ asset('frontend/paiement/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/jquery-migrate-3.0.1.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/popper.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/aos.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/scrollax.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{{ asset('frontend/paiement/js/google-map.js') }}"></script>
+    <script src="{{ asset('frontend/paiement/js/main.js') }}"></script>
+
+
 @endsection
