@@ -14,9 +14,9 @@
                                 <h1>{{ $slider->description2 }} </h1>
                                 <a class="buynow" href="#">Acheter</a>
                                 <ul class="social_icon">
-                                    <li> <a href="#"><i class="fa fa-brands fa-facebook"></i></a></li>
-                                    <li> <a href="#"><i class="fa fa-brands fa-twitter"></i></a></li>
-                                    <li> <a href="#"><i class="fa fa-brands fa-instagram"></i></a></li>
+                                    <li> <a href="https://www.facebook.com/ulrichfedjo"><i class="fa fa-brands fa-facebook"></i></a></li>
+                                    <li> <a href="https://www.twitter.com/ulrichfedjo"><i class="fa fa-brands fa-twitter"></i></a></li>
+                                    <li> <a href="https://www.instagram.com/ulrichfedjo"><i class="fa fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                 <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
                     <div class="about_box">
                         <h3>Apropos de nous</h3>
-                        <span>Our Mobile Shop</span>
+                        <span>Boutique de telephone</span>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page
                             when looking at its layout. The point of It is a long established fact that a reader will be
                             distracted by the readable content of a page when looking at its layout. The point of It is a
@@ -101,7 +101,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Our Brand</h2>
+                        <h2>Notre Boutique</h2>
+
                     </div>
                 </div>
             </div>
@@ -125,7 +126,7 @@
                         </div>
                     @endforeach
                     <div class="col-md-12">
-                        <a class="read-more">See More</a>
+                        <a class="read-more">Voir Plus</a>
                     </div>
 
 
@@ -143,7 +144,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>what say our clients</h2>
+                        <h2>Que disent nos clients</h2>
                     </div>
                 </div>
             </div>

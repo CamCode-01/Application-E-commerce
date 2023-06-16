@@ -97,8 +97,10 @@
                         <div class="location_icon_bottum">
                             <ul>
                                 <li><img src="{{asset('frontend/icon/call.png')}}" />(+237)657 099 175</li>
-                                <li><img src="{{asset('frontend/icon/email.png')}}" />ulrichfedjo@gmail.com</li>
-                                <li><img src="{{asset('frontend/icon/loc.png')}}" />Position</li>
+                                <li><a href="mailto:nom_utilisateur@gmail.com" style="color: white"><img src="{{asset('frontend/icon/email.png')}}" />ulrichfedjo@gmail.com</a></li>
+                                <li><a href="https://www.google.com/maps?q=ecoleemergencelogbessou"style="color: white"><img src="{{asset('frontend/icon/loc.png')}}" />Position</a></li>
+                                {{-- <a href="https://www.google.com/maps?q=adresse">Nom de la localisation</a> --}}
+
                             </ul>
                         </div>
                     </div>
@@ -129,14 +131,14 @@
                             <div class="headinga">
                                 <h3>Addresse</h3>
                                 <span>Douala-Cameroun</span>
-                                <p>(+237) 657-099-175
-                                    <br>ulrichfedjo@gmail.com</p>
+                                <p ><a href="tel:+237620146722" style="color: white">(+237) 657-099-175</a>
+
+                                    <br><a href="mailto:ulrichfedjo@gmail.com" style="color: white">ulrichfedjo@gmail.com</a></p>
                             </div>
                             <ul class="location_icon">
-                                <li> <a href="#"><i class="fa fa-brands fa-facebook"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-brands fa-twitter"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-brands fa-instagram"></i></a></li>
-
+                                <li> <a href="https://www.facebook.com/ulrichfedjo"><i class="fa fa-brands fa-facebook"></i></a></li>
+                                <li> <a href="https://www.twitter.com/ulrichfedjo"><i class="fa fa-brands fa-twitter"></i></a></li>
+                                <li> <a href="https://www.instagram.com/ulrichfedjo"><i class="fa fa-brands fa-instagram"></i></a></li>
                             </ul>
                             <div class="menu-bottom">
                                 <ul class="link">

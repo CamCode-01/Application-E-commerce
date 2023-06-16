@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2><b><i>Notre Boutique</i></b></h2>
+                        <h2><b><i>Nos marques</i></b></h2>
                     </div>
 
                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
